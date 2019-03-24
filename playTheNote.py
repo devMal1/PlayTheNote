@@ -13,7 +13,7 @@ NOTES = [
 
 # Functions
 def getRandomIndexExclusive(size):
-    return int(random.random() * (size - 1))
+    return int(random.random() * size)
 
 def generateNote():
     randomNumber = getRandomIndexExclusive(len(NOTES))
