@@ -25,13 +25,21 @@ NOTES = [
     "Bb"
 ]
 
+TYPES = [
+    "Major Chord",
+    "Minor Chrod",
+    "Major 7th",
+    "Minor 7th"
+]
+
 # Functions
 def getRandomIndexExclusive(size):
     return int(random.random() * size)
 
 def generateNote():
-    randomNumber = getRandomIndexExclusive(len(NOTES))
-    return NOTES[randomNumber]
+    randomNoteNumber = getRandomIndexExclusive(len(NOTES))
+    randomTypeNumber = getRandomIndexExclusive(len(TYPES))
+    return NOTES[randomNoteNumber] + " : " + TYPES[randomTypeNumber]
 
 def displayNote(note):
     print("< " + note + " >", end = " ")
